@@ -9,16 +9,16 @@
 					<device>Smart-Robot</device>
 				</condition>
 				<context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-            	    <action>Display-Text</action>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action>Ask-Question</situation>
-              </case>
-            </situation-type>
+					<situation-type>
+						<case>
+							<situation>noisy</situation>
+							<action>Display-Text</action>
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action>Ask-Question</situation>
+						</case>
+					</situation-type>
 				</context>
 			</case>
 			<case>
@@ -26,50 +26,50 @@
 					<device>Smart-Camera</device>
 				</condition>
 				<context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-            	    <action>Display-Photo</action>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action>Display-Video</situation>
-              </case>
-            </situation-type>
+					<situation-type>
+						<case>
+							<situation>noisy</situation>
+							<action>Display-Photo</action>
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action>Display-Video</situation>
+						</case>
+					</situation-type>
 				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Speaker</device>
 				</condition>
-        <context>
-              <situation-type>
-                <case>
-                  <situation>crowded</situation>
-                    <action>Display-Music-Name</action>
-                </case>
-                <case>
-                  <situation>vaccant</situation>
-                    <action>Play-Music</situation>
-                </case>
-              </situation-type>
-          </context>
+				<context>
+					<situation-type>
+						<case>
+							<situation>noisy</situation>
+							<action>Display-Music-Name</action>
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action>Play-Music</situation>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
 				<context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-            	    <action>Display-Text</action>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action>Ask-Questions</situation>
-              </case>
-            </situation-type>
+					<situation-type>
+						<case>
+							<situation>noisy</situation>
+							<action>Display-Text</action>
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action>Ask-Questions</situation>
+						</case>
+					</situation-type>
 				</context>
 			</case>
 		</rule>
@@ -81,45 +81,55 @@
 					<device>Smart-Robot</device>
 				</condition>
 				<context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-                  <action-sequence>
-            	      <action>Face-Recognition</action>
-                    <action>Display-Message</action>
-                  </action-sequence>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action-sequence>
-            	      <action>Face-Recognition</action>
-                    <action>Say-To-Come-In</action>
-                  </action-sequence>              
-              </case>
-            </situation-type>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>Face-Recognition</action>
+								<action>Display-Message</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Face-Recognition</action>
+								<action>Say-To-Come-In</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
 				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Camera</device>
 				</condition>
-			  <context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-                  <action-sequence>
-            	      <action>High-Focus</action>
-                    <action>Face-Detection</action>
-                  </action-sequence>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action-sequence>
-            	      <action>Average-Focus</action>
-                    <action>Face-Detection</action>
-                  </action-sequence>              
-              </case>
-            </situation-type>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>High-Focus</action>
+								<action>Face-Detection</action>
+								<action>Display-Message</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Average-Focus</action>
+								<action>Face-Detection</action>
+								<action>Speak-Loudly</action>
+							</action-sequence>              
+						</case>
+						<case>
+							<situation>rainy</situation>
+							<action-sequence>
+								<action>High-Focus</action>
+								<action>Face-Detection</action>
+								<action>Display-Message</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
 				</context>
 			</case>
 			<case>
@@ -127,31 +137,53 @@
 					<device>Smart-Speaker</device>
 				</condition>
 				<context>
-            <situation-type>
-              <case>
-                <situation>crowded</situation>
-                  <action-sequence>
-            	      <action>Voice-Detection</action>
-                    <action>Display-Message</action>
-                  </action-sequence>
-              </case>
-              <case>
-                <situation>vaccant</situation>
-                  <action-sequence>
-            	      <action>Voice-Detection</action>
-                    <action>Speak-Loudly</action>
-                  </action-sequence>              
-              </case>
-            </situation-type>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>Voice-Detection</action>
+								<action>Display-Message</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Voice-Detection</action>
+								<action>Speak-Loudly</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
 				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
-				<action>
-					<action-type>Voice-Recognition</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>Face-Recognition</action>
+								<action>Display-Message</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Face-Recognition</action>
+								<action>Say-To-Come-In</action>
+							</action-sequence>              
+						</case>
+						<case>
+							<situation>noisy</situation>
+							<action-sequence>
+								<action>Face-Recognition</action>
+								<action>Display-Message</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
+				</context>
 			</case>
 		</rule>
 		<rule>
@@ -161,69 +193,217 @@
 				<condition>
 					<device>Smart-Robot</device>
 				</condition>
-				<action>
-					<action-type>Show-Location-To-User</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>location-is-far</situation>
+							<action-sequence>
+								<action>Display-Map</action>
+								<action>Send-Location-To-User</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>location-is-near</situation>
+							<action-sequence>
+								<action>Say-Follow-Me</action>
+								<action>Start-Moving</action>
+							</action-sequence>              
+						</case>
+						<case>
+							<situation>obstacle</situation>
+							<action-sequence>
+								<action>Detect-New-Path</action>
+								<action>Start-Moving</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
-					<device>Smart-Camera</device>
+					<device>Smart-Camera</device> //smart camera provides guideline on capturing photo or video by asking user to stand properly! 
 				</condition>
-				<action>
-					<action-type>Display-Map</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>user-is-very-near-to-the-camera</situation>
+							<action-sequence>
+								<action>Alert-User-To-Maintain-Distance</action>
+								<action>Capture-Photo</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>user-is-very-far-from-the-camera</situation>
+							<action-sequence>
+								<action>Alert-User-To-Maintain-Distance</action>
+								<action>Capture-Photo</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Speaker</device>
 				</condition>
-				<action>
-					<action-type>Name-The-Location-Directions</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>music-not-installed</situation>
+							<action-sequence>
+								<action>Install-Music</action>
+								<action>Play-Music</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>music-installed</situation>
+							<action-sequence>
+								<action>Find-Music</action>
+								<action>Play-Music</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
-				<action>
-					<action-type>Take-User-To-Location</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>obstacles</situation>
+							<action-sequence>
+								<action>Detect-New-Path</action>
+								<action>Start-Moving</action>
+							</action-sequence>
+						</case>
+						<case>
+							<situation>stairs</situation>
+							<action-sequence>
+								<action>Find-Elivator</action>
+								<action>Start-Moving</action>
+							</action-sequence>              
+						</case>
+					</situation-type>
+				</context>
 			</case>
 		</rule>
 		<rule>
-			<rule-name>Safety-Measures</rule-name>
+			<rule-name>Safety-Measures</rule-name> 
 			<device-type>Actuators</device-type>
 			<case>
 				<condition>
-					<device>Smart-Robot</device>
+					<device>Smart-Robot</device> //alert on waste
 				</condition>
-				<action>
-					<action-type>Alert-On-Waste</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action>Display-Message</action>
+						</case>
+						<case>
+							<situation>noisy</situation>
+							<action>Display-Message</action>             
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action>Alert-On-Waste-Using-Voice</action>             
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action>Alert-On-Waste-Using-Voice</action>             
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Camera</device>
 				</condition>
-				<action>
-					<action-type>Alert-On-Waste</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>High-Focus</action>
+								<action>Switch-Off-Flash-Light</action>
+								<action>Stream-Video</action>
+							</action-sequence>						
+						</case>
+						<case>
+							<situation>noisy</situation>
+							<action-sequence>
+								<action>High-Focus</action>
+								<action>Switch-Off-Flash-Light</action>
+								<action>Stream-Video</action>
+							</action-sequence>							
+						</case>
+						<case>
+							<situation>quiet</situation>
+							<action-sequence>
+								<action>Average-Focus</action>
+								<action>Switch-Off-Flash-Light</action>
+								<action>Stream-Video</action>
+							</action-sequence>	
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Average-Focus</action>
+								<action>Switch-Off-Flash-Light</action>
+								<action>Stream-Video</action>
+							</action-sequence>	
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Speaker</device>
 				</condition>
-				<action>
-					<action-type>Alert-On-Waste</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>senior-users</situation>
+							<action-sequence>
+								<action>Low-Volume</action>
+								<action>Play-Classic-Music</action>
+							</action-sequence>						
+						</case>
+						<case>
+							<situation>young-users</situation>
+							<action-sequence>
+								<action>Average-Volume</action>
+								<action>Play-Preferences</action>
+							</action-sequence>							
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
-				<action>
-					<action-type>Alert-On-Waste</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>disable-users</situation>
+							<action-sequence>
+								<action>Adjust-Seat</action>
+								<action>Avoid-Obstacles</action>
+								<action>Slow-Movement</action>
+							</action-sequence>						
+						</case>
+						<case>
+							<situation>normal-users</situation>
+							<action-sequence>
+								<action>Avoid-Obstacles</action>
+								<action>Average-Movement</action>
+							</action-sequence>							
+						</case>
+					</situation-type>
+				</context>
 			</case>
 		</rule>
 	</authorisation-rules>
@@ -235,33 +415,77 @@
 				<condition>
 					<device>Smart-Robot</device>
 				</condition>
-				<action>
-					<action-type>Consensus-Seeking</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>indoor-office/staff rooms/library</situation> //more people in office but no noise so robot can still display message to do not disturb others
+							<action>Display-Question</action> //consensus seeking through text display
+						</case>
+						<case>
+							<situation>outdoor-hall/cafe</situation>
+							<action>Ask-Question</action>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Camera</device>
 				</condition>
-				<action>
-					<action-type>Apply-Manipulation</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action-sequence>
+								<action>High-Focus</action>
+								<action>Apply-Video/Photo-Manipulation</action>
+								<action>Capture-Photo/Video</action>
+							</action-sequence>						
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action-sequence>
+								<action>Average-Focus</action>
+								<action>Apply-Video/Photo-Manipulation</action>
+								<action>Capture-Photo/Video</action>
+							</action-sequence>							
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Speaker</device>
 				</condition>
-				<action>
-					<action-type>Refrain-Recording-Preferences</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>play-classic-music</situation>
+							<action>Refrain-Recording-Preferences</action>
+						</case>
+						<case>
+							<situation>play-pop-music</situation>
+							<action>Refrain-Recording-Preferences</action>						
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
-				<action>
-					<action-type>Refrain-Recording-Locations</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>location-is-far</situation>
+							<action>Refrain-Recording-Locations</action>
+						</case>
+						<case>
+							<situation>location-is-near</situation>
+							<action>Refrain-Recording-Locations</action>						
+						</case>
+					</situation-type>
+				</context>
 			</case>
 		</rule>
 		<rule>
@@ -271,36 +495,72 @@
 				<condition>
 					<device>Smart-Robot</device>
 				</condition>
-				<action>
-					<action-type>Greet-User</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action>Display-Excuse-Me</action>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action>Say-Excuse-Me</action>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Camera</device>
 				</condition>
-				<action>
-					<action-type>Display-Greet-Message</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action>Display-Greet-Message</action>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action>Greet-With-Voice</action>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Speaker</device>
 				</condition>
-				<action>
-					<action-type>Greet-User</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action>Display-Greet-Message</action>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action>Greet-With-Voice</action>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 			<case>
 				<condition>
 					<device>Smart-Wheelchair</device>
 				</condition>
-				<action>
-					<action-type>Greet-User</action-type>
-				</action>
+				<context>
+					<situation-type>
+						<case>
+							<situation>crowded</situation>
+							<action>Display-Greet-Message</action>
+						</case>
+						<case>
+							<situation>vaccant</situation>
+							<action>Greet-With-Voice</action>
+						</case>
+					</situation-type>
+				</context>
 			</case>
 		</rule>
-		<rule>
+		<rule>  /////////////////////////////////////////////////////////NEED TO START FROM HERE/////////////////////////////////////NEED TO START FROM HERE////////////////////////
 			<rule-name>Transparent-in-Actions</rule-name>
 			<device-type>Actuators</device-type>
 			<case>
